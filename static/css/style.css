@@ -1,0 +1,1422 @@
+@import url(fonts.css);
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    width: 100vw;
+    height: 100vh;
+    
+    overflow-x: hidden;
+}
+
+
+header{
+    width: 100%;
+    min-height: 100vh;
+    padding:40px 40px ;
+    position: relative;
+    background: linear-gradient(20deg, #f8f8f8, #0339b7);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+/* .video-section {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  z-index: -2;
+}
+
+.video-section video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+} */
+
+/* -------------------------------nav-------------------------- */
+nav{
+  position: absolute;
+  top: 5px;
+  left: 65%;
+    width: 20%;
+    position: fixed;
+    overflow: hidden;
+    z-index: 1;
+    display: flex;
+    flex-wrap: wrap;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+nav ul{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    list-style: none;
+
+}
+li{
+    margin: 0 20px;
+}
+li a{
+    color: white;
+    text-decoration: none;
+    font-size: 20px;
+    font-weight: 500;
+    transition: all 0.3s ease-in-out;
+}
+
+
+
+
+.link{
+  font-family: 'Hind-Medium';
+}
+.link2{
+  font-family: 'Hind-Medium';
+}
+
+
+
+
+
+.link::after {
+  content: '';
+  position: absolute;
+  left: 25%;
+  bottom: 13px;
+  width: 20%;
+  height: 2px;
+  background-color: black;
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.3s ease;
+}
+
+.link:hover::after {
+  transform: scaleX(1);
+  transform-origin: center;
+  
+
+}
+.link2::after {
+  content: '';
+  position: absolute;
+  left: 50%;
+  bottom: 15px;
+  width: 25%;
+  height: 2px;
+  background-color: black;
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.3s ease;
+}
+
+.link2:hover::after {
+  transform: scaleX(1);
+  transform-origin: center;
+}
+
+
+
+
+.nav1{
+  background:black;
+  border: #000000 solid 1px;
+}
+
+/* -----------------------------------------about--------------------------------- */
+.down1{
+  position: absolute;
+  background-color:black;
+  width: 15%;
+  height: 60px;
+  top: 5px;
+  left:83% ;
+  border-radius: 30px;
+}
+.down1 ul{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  list-style: none;
+  height: 100%;
+}
+.down1 ul li{
+  margin: 10px 15px;
+}
+
+.down1 a{
+    color:white;
+    text-decoration: none;
+    font-family: 'Hind-Medium';
+    font-size: 20px;
+    font-weight: 500;
+    z-index: 2;
+}
+
+.about {
+  position: relative;
+}
+
+
+.about:hover {
+position: relative;
+  background-color: white;
+  border-radius: 40px;
+  padding: 8px 12px;
+  color: black;
+  box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.5);
+  transition: all 0.3s ease-in-out;
+
+}
+.about:hover::after {
+  content: '';
+  position: absolute;
+  left:-100px;
+  transform: translateX(-20px);
+}
+.contact:hover {
+  position: relative;
+  background-color: white;
+  border-radius: 40px;
+  padding: 8px 12px;
+  color: black;
+  box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.5);
+  transition: all 0.3s ease-in-out;
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ------------------------------img-log----------------------------- */
+.logo1 {
+    position: absolute;
+    top: 0;
+    left:0 ;
+  position: fixed;
+  z-index: 2;
+    width: 100%;
+    height: 8%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    /* Wax ka beddel background si uu u yeesho 3D effect */
+  box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.5), inset 0px -10px 20px rgba(255, 255, 255, 0.1);
+  background: linear-gradient(20deg, #f8f8f8, #0339b7);
+    /* Wax ka beddel gradient si uu uga yara fogaado darbiga */
+  /* background: linear-gradient(135deg, #00000015, #04229b); */
+}
+.logo{
+  position: absolute;
+  
+  left: 9%;
+
+  font-family:'Britney-Variable';
+  font-size: 4rem;
+  color: rgba(19, 16, 92, 0.968);
+
+
+}
+
+/* -------------------------------------hero section------------------------------------------- */
+
+
+.hero-text {
+    position: absolute;
+    
+    top: 50%;
+    left: 23%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    line-height: 1.8;
+    
+}
+.A{
+  position: relative;
+  left: -25%;
+  bottom: 20px;
+  font-family:'Switzer-BlackItalic' ;
+  font-size: 3rem;
+  
+
+}
+.B{
+  position: absolute;
+  left: 45%;
+  font-family: 'Britney-Ultra';
+
+  white-space: nowrap;
+  overflow: hidden;
+  border-right: 2px solid #333;
+  font-size: 1.8rem;
+  width: 0;
+  display: inline-block;
+  animation: typing-cycle 5s infinite;
+}
+
+@keyframes typing-cycle {
+  0% {
+    width: 0;
+  }
+  60% {
+    width: 26.5ch; /* Isku bedel tirada characters-kaaga */
+  }
+  80%, 100% {
+    width: 26.5ch; /* Joog */
+  }
+}
+.sub-text{
+  font-family: 'Bonny-Medium';
+  font-size: 1.6rem;
+  color:  #333;
+}
+.xon{
+  display: block;
+}
+
+
+
+.cart{
+  position: relative;
+  top:-2px;
+  left: -10px;
+  display: flex;
+  
+}
+.hero-button a{
+  position: absolute;
+  display: flex;
+  top: 70%;
+  left: 20%;
+  transform: translate(-50%, -50%);
+  background: linear-gradient(135deg, #1A1F36, #0D6EFD);
+  color:#ffffff;
+  padding: 10px 20px;
+  border-radius: 30px;
+  font-size: 1.2rem;
+  font-family: 'Switzer-BlackItalic';
+  text-decoration: none;
+  transition: background-color 0.3s ease-in-out;
+  box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.5);
+}
+.hero-button a:hover {
+  background: linear-gradient(135deg, #0D6EFD, #1A1F36);
+  box-shadow: 0px 15px 30px rgba(0, 0, 0, 0.7);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+.image1 img{
+  position: absolute;
+  width: 12%;
+z-index: 1;
+  
+  bottom: 0px;
+border-radius: 50px;
+    right: 32%;
+    box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.5);
+  animation: floatY1 9s ease forwards;
+  transition: transform 0.3s ease-in-out;
+  will-change: transform;
+}
+
+@keyframes floatY1 {
+  0% ,55.55%{
+    transform: translateY(-300px)scale(1);
+  }
+  100% {
+    transform: translateY(0)scale(1);
+  }
+}
+
+.image2 img {
+  position: absolute;
+  width: 12%;
+  height: 32%;
+  top: 10%;
+  right: 32%;
+  border-radius: 50px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+  animation: floatY2 9s ease forwards;
+  
+}
+@keyframes floatY2 {
+  0% ,55.55% {
+    transform: translateY(200px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+
+.image3 img {
+  position: absolute;
+  height: 34%;
+  top: 38%;
+  left: 48%;
+  border-radius: 50px;
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.5);
+  animation: floatY 9s ease forwards;
+} 
+.image4 img {
+  position: absolute;
+  width: 12%;
+  height: 34%;
+  bottom: 1px;
+  left: 83%;
+  border-radius: 50px;
+  box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.5);
+  animation: floatY4 9s forwards ease;
+ 
+  
+} 
+@keyframes floatY4 {
+  0%, 55.55% {
+    transform: translateY(-300px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+.image5 img {
+  position: absolute;
+  width: 12%;
+  height: 34%;
+  top: 10%;
+  left: 83%;
+  border-radius: 50px;
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.5);
+  animation: floatY5 9s ease forwards;
+} 
+@keyframes floatY5 {
+  0%,55.55%{
+    transform: translateY(200px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+.image6 img {
+  position: absolute;
+  height: 34%;
+  width: 12%;
+  top: 38%;
+  left: 70%;
+  border-radius: 50px;
+  box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.5);
+  animation: floatY 4s ease-in-out infinite alternate;
+}
+@keyframes floatY {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(-20px);
+  }
+}
+
+/* ---------------------------------------------------------------productas----------------------------- */
+section{
+  width: 100vw;
+  height: 800px;
+  
+  margin: 0;
+  
+  
+  
+}
+/* ===============================================================
+   QAYBTA ALAABOOYINKA (PRODUCT SECTION) OO LOO BEDDELAY GRID
+   =============================================================== */
+
+/* 1. Waxaan ka dhigaynaa dhererka qaybta mid si toos ah isu habeeya si ay ula qabsato tirada alaabooyinka. */
+#product {
+    width: 100%;
+    height: auto; /* Waxaa laga beddelay 100% --> auto */
+    padding: 60px 20px; /* Waxaan kordhinay padding-ka si ay u qurux badnaato */
+    background: linear-gradient(to bottom, #98a9f6, #43518efa);
+    display: flex;
+    justify-content: center; /* Si grid-ka uu dhexda ugu yimaado */
+}
+
+/* 2. Konteenarkan (.cards) hadda waa Grid Container-keena. */
+.cards {
+    width: 100%;
+    max-width: 1500px; /* Waxaad dejin kartaa ballaca ugu badan ee la rabo shaashadaha waaweyn */
+    height: auto;
+     /* Dhererku wuxuu ku xirnaan doonaa tirada alaabooyinka */
+    display: grid;
+    /* Kani wuxuu abuurayaa grid la qabsi leh. Wuxuu isku dayi doonaa inuu habeeyo tiirar (columns) 300px ah inta ay shaashaddu qaado.
+       Shaashadaha yaryar, wuxuu u beddeli doonaa hal ama laba tiir. */
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 35px; /* Kani waa farqiga u dhexeeya kaararkaaga. */
+}
+
+/* 3. Waxaan nadiifinay qaabka kaarka.
+   Grid-ka ayaa hadda mas'uul ka ah dhammaan meelaynta, marka waxaan ka saarnay 'position', 'top', 'left', 'width', iyo 'height'. */
+.card {
+    display: flex;
+    flex-direction: column; /* Waxaan u habaynaynaa waxyaabaha ku jira kaarka si ay u hoos isugu xigaan */
+    justify-content: flex-start; /* Waxay ka bilaabaysaa xagga sare */
+    align-items: center;
+    border-radius: 20px;
+    background: white;
+    height: auto;
+    max-height: 600px;
+    box-shadow: inset 0px 0px 20px rgba(0, 0, 0, 0.2), 0px 10px 20px rgba(0, 0, 0, 0.3);
+    overflow: hidden;
+    position: relative; /* Muhiim u ah meelaynta badhanka "Shop Now" */
+    padding-bottom: 80px; /* Waxaan boos uga tagnay badhanka hoose */
+}
+
+/* 4. Waxaan dib u habayn ku samaynay qaybaha ku jira kaarka si ay ula shaqeeyaan qaabka cusub. */
+ .image-card {
+    height: 500px;
+    margin: 0;
+    background-color: white;
+    overflow: hidden;
+}  
+
+.image-card img {
+    width: 100%;
+    height: 300px;
+    object-fit: contain;
+    
+    transition: transform 0.3s ease-in-out;
+}
+
+.image-card:hover img {
+    transform: scale(1.1);
+}
+
+.new-tag {
+    position: absolute; /* Wuxuu ku sugnaanayaa meeshiisii hore ee geeska kaarka */
+    color: #faa307;
+    z-index: 1;
+    top: 10px;
+    left: 10px;
+    background-color: rgba(255, 255, 255, 0.7);
+    padding: 2px 8px;
+    border-radius: 10px;
+    font-weight: bold;
+}
+
+.product-name {
+    position: static; /* Waxaa laga saaray 'absolute' */
+    font-family: 'Switzer-Regular', sans-serif;
+    font-size: 1.3rem;
+    font-weight: 600;
+    color: #111827;
+    padding: 20px 15px 10px 15px;
+    text-align: center;
+    width: 100%;
+}
+
+.description {
+    position: static; /* Waxaa laga saaray 'relative' */
+    font-family: 'Hind-SemiBold', sans-serif;
+    padding: 0 15px 20px 15px;
+    text-align: center;
+    font-size: 1rem;
+    color:#6B7280;
+    flex-grow: 1; /* Wuxuu buuxinayaa booska bannaan si kaararku isula ekaadaan dherer ahaan */
+}
+
+.price {
+    position: static; /* Waxaa laga saaray 'absolute' */
+    font-size: 1.4em;
+    font-weight: bold;
+    color: #c01e19;
+    padding-bottom: 20px;
+}
+
+.product-link {
+    position: relative; /* Wuxuu ahaanayaa mid ku xiran kaarka hoostiisa */
+    bottom: -60px; /* 20px oo hoosta ah */
+    left: 15%;
+    transform: translateX(-50%); /* Si uu dhexda ugu yimaado */
+    background: linear-gradient(135deg, #1A1F36, #0D6EFD);
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+    border-radius: 40px;
+    padding: 12px 25px;
+    color: white;
+    font-family: 'Hind-Bold', sans-serif;
+    text-decoration: none;
+    white-space: nowrap; /* Si uusan u kala go'in qoraalka */
+}
+
+.product-link:hover {
+    color: black;
+    background: white;
+    box-shadow: inset 0 0 15px 0px rgba(0, 0, 0, 0.9);
+}
+
+/* 5. Hadda waan iska tirtiri karnaa sharciyadii hore ee meelaynta ee aan shaqaynayn. */
+.card-1, .card-2, .card-3, .card-4, .card-5, .card-6, .card-7, .card-8, .card-9, .card-10 {
+    /* Kuwan looma baahna hadda! */
+    position: static;
+    top: auto;
+    left: auto;
+    width: auto;
+    height: auto;
+}
+/* -----------------------------------------------next section --------------------------------------- */
+
+.secand-product-section{
+width: 100vw;
+height: 100vh;
+background: linear-gradient(20deg, #f8f8f8, #0339b7);
+overflow: hidden;
+
+  
+
+}
+.new-arrival{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+background-color: white;
+  width: 100%;
+  height: 6%;
+}
+.arrival{
+  display: inherit;
+  font-size: 3rem;
+  font-family: 'Britney-Bold';
+  margin-left: -20%;
+  color: #000000;
+}
+/* ====== BILAABMA QAYBTA CSS-KA EE LA BEDDELAY ====== */
+/* Waxaad tirtirtaa CSS-kii hore ee u dhaxeeyey .arrival iyo .image-slider oo geli kan */
+
+.new-products {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 25px;
+  padding: 20px;
+  width: 90%;
+  margin: 20px auto;
+  background-color: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border-radius: 20px;
+  box-shadow: 8px 8px 24px rgba(0, 0, 0, 0.2);
+}
+
+.card-11 {
+  position: relative; /* Muhiim u ah animation-ka */
+  background-color: white;
+  border-radius: 20px;
+  overflow: hidden; /* Si faahfaahinta qarsoon aysan u muuqan */
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  height: 200px; /* Dherer go'an si ay isula ekaadaan */
+}
+
+.card-11:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+}
+
+.image-card1 {
+ width: 100%;
+  height: 100%;
+  overflow: hidden;
+} 
+
+.image-card1 img {
+ 
+  width:200px;
+  
+  height: 100%;
+  object-fit: contain;
+  transition: transform 0.4s ease;
+}
+
+.card-11:hover .image-card1 img {
+  transform: scale(1.1); /* Weynee sawirka marka la dul tago */
+}
+
+.price12 {
+  position: relative;
+  bottom: 30px;
+  right:-180px;
+  background-color: #0D6EFD;
+  color: white;
+  padding: 5px 12px;
+  border-radius: 20px;
+  font-family: 'Hind-Bold';
+  font-size: 1.2rem;
+  width:120px;
+  z-index: 1; 
+  transition: opacity 0.3s ease;
+
+} 
+
+/* Marka la dul tago kaarka, qiimuhu wuu qarsoomayaa */
+.card-11:hover .price12 {
+  opacity: 0;
+
+}
+
+/* Kani waa konteenarka cusub ee faahfaahinta qarsoon */
+.product-details-hover {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: rgba(255, 255, 255, 0.05); /* Transparent white with blur backdrop */
+backdrop-filter: blur(10px); /* Frosted glass effect */
+  padding: 20px;
+  text-align: center;
+  z-index: 3;
+
+  /* Halkan ka bilow animationka */
+  transform: translateY(100%); /* Ku qari hoosta kaarka */
+  opacity: 0;
+  transition: transform 0.4s ease-out, opacity 0.4s ease-out;
+}
+
+/* Marka la dul tago kaarka, soo bandhig faahfaahinta */
+.card-11:hover .product-details-hover {
+  transform: translateY(0); /* Ku soo celi meeshiisii */
+  opacity: 1; /* Ka dhig mid muuqda */
+}
+
+/* Habaynta qoraalada gudaha ku jira */
+.product-name12 {
+  font-family: 'Bonny-Medium';
+  font-size: 1.5rem;
+  color:black;
+  margin: 0 0 10px 0;
+  display: block;
+}
+
+.description12 {
+  font-family: 'Hind-Medium';
+  font-size: 1rem;
+  color:rgb(30, 59, 134);
+  margin-bottom: 20px;
+  display: block;
+}
+
+.product-link1 {
+  display: inline-block;
+  background: linear-gradient(135deg, #1A1F36, #0D6EFD);
+  color: white;
+  padding: 10px 25px;
+  border-radius: 30px;
+  text-decoration: none;
+  font-family: 'Hind-Bold';
+  transition: background 0.3s ease;
+}
+
+.product-link1:hover {
+  background: linear-gradient(135deg, #0D6EFD, #1A1F36);
+  color: white; /* Hubi in midabku isku mid yahay */
+}
+
+/* Tirtir .new-tag12 haddii aadan u baahnayn, ama habee */
+.new-tag12 {
+   display: none; /* Waan qarinay hadda */
+}
+
+
+/* ====== DHAMAADKA QAYBTA CSS-KA EE LA BEDDELAY ====== */
+
+
+/* Animation-ka socodka sawirrada */
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    /* Waxaan u dhaqaajinaynaa bidix ballaca 6-dii sawir ee hore iyo farqigooda */
+    transform: translateX(calc(-300px * 6 - 10px * 6));
+  }
+}
+
+.image-slider {
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+  top: -10px;
+  background: linear-gradient(20deg, #f8f8f8, #0339b7);
+  padding: 10px 0;
+  /* Kani wuxuu ku darayaa effect qurxoon oo geesaha ka dhigaya kuwo khafiif ah */
+  -webkit-mask-image: linear-gradient(to right, transparent, white 10%, white 95%, transparent);
+  mask-image: linear-gradient(to right, transparent, white 10%, white 90%, transparent);
+}
+
+.slider-track {
+  display: flex;
+  /* Ballaca guud ee sawirrada (12 sawir) iyo farqiga u dhexeeya */
+  width: calc((300px * 6 + 10px * 6) * 2);
+  gap: 10px;
+  /* Ku dar animation-ka socodka */
+  animation: scroll 40s linear infinite;
+}
+
+/* Jooji animation-ka marka jiirka la dul saaro slider-ka */
+.image-slider:hover .slider-track {
+  animation-play-state: paused;
+}
+
+.slider-track img {
+  width: 300px;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: transform 0.3s;
+}
+
+.slider-track img:hover {
+  transform: scale(1.1);
+}
+/* ---------------------------------------------------------------video-section------------------------------------- */
+#hoverVideo{
+  /* border-bottom-left-radius:40px ;  */
+  /* border-top-left-radius:40px ; */
+  box-shadow: 10px 0 24px rgba(255, 255, 255, 0.5) ;
+  width:70%;
+  height: 300px;
+  border-radius: 40px;
+  transform: translate(250px,-10px);
+  
+  object-fit: cover;
+
+}
+/* .all-in{
+  display:grid;
+  grid-template-columns: 1fr 1fr;
+  width: 100%;
+  height: 100%;
+} */
+
+/* -------------------------------------------------------------------next------------------------------------------------ */
+  #features-section {
+            max-width:100%;
+            max-height: 500px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 20px;
+            padding: 30px 40px;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.08);
+            position: relative;
+            top:-10px;
+            overflow: hidden;
+        }
+
+        .features-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: linear-gradient(90deg, #3b82f6, #1d4ed8, #2563eb);
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+
+        .section-title h2 {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: #1e293b;
+            margin-bottom: 15px;
+            background: linear-gradient(135deg, #1e293b, #3b82f6);
+            background-clip: text;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .section-subtitle {
+            font-size: 1.1rem;
+            color: #64748b;
+            font-weight: 400;
+        }
+
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 40px;
+            margin-top: 50px;
+        }
+
+        .feature-card {
+            text-align: center;
+            padding: 40px 30px;
+            border-radius: 16px;
+            background: white;
+            border: 1px solid #e2e8f0;
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .feature-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(135deg, rgba(59, 130, 246, 0.02), rgba(37, 99, 235, 0.05));
+            opacity: 0;
+            transition: opacity 0.4s ease;
+        }
+
+        .feature-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 25px 50px rgba(59, 130, 246, 0.15);
+            border-color: #3b82f6;
+        }
+
+        .feature-card:hover::before {
+            opacity: 1;
+        }
+
+        .feature-icon {
+            width: 80px;
+            height: 80px;
+            margin: 0 auto 25px;
+            background: linear-gradient(135deg, #3b82f6, #1d4ed8);
+            border-radius: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            transition: all 0.4s ease;
+            box-shadow: 0 10px 30px rgba(59, 130, 246, 0.3);
+        }
+
+        .feature-card:hover .feature-icon {
+            transform: rotateY(180deg) scale(1.1);
+            box-shadow: 0 15px 40px rgba(59, 130, 246, 0.4);
+        }
+
+        .feature-icon svg {
+            width: 40px;
+            height: 40px;
+            color: white;
+            transition: transform 0.4s ease;
+        }
+
+        .feature-card:hover .feature-icon svg {
+            transform: rotateY(180deg);
+        }
+
+        .feature-title {
+            font-size: 1.4rem;
+            font-weight: 600;
+            color: #1e293b;
+            margin-bottom: 15px;
+            position: relative;
+            z-index: 1;
+        }
+
+        .feature-description {
+            font-size: 1rem;
+            color: #64748b;
+            line-height: 1.6;
+            position: relative;
+            z-index: 1;
+        }
+
+/* --------------------------------------------------------------footer--------------------------------------------- */
+/* --------------------------------------------------------------footer--------------------------------------------- */
+#contact {
+  width: 100%;
+  padding: 60px 20px; /* Waxaan ku darnay padding si ay u qurux badnaato */
+  background: linear-gradient(20deg, #f8f8f8, #0339b7);
+  display: flex; /* Waxaan u isticmaalaynaa flex si aan content-ka dhexda ugu keeno */
+  justify-content: center;
+  align-items: center;
+}
+
+.footer-section-part {
+  width: 100%;
+  max-width: 800px; /* Waxaan xaddidnay ballaca si uusan u fidin shaashadaha waaweyn */
+  display: flex;
+  position: relative; /* Waxaan u isticmaalaynaa si aan u habeynno logo */
+
+  flex-direction: row; /* Wax walba waxaan u dhigaynaa inay hoos isugu xigaan */
+  align-items: center; /* Wax walba dhexda ayaan keenaynaa (horizontal) */
+  gap: 25px; /* Farqiga u dhexeeya walxaha */
+  background-color: black;
+  border-radius: 40px;
+  padding: 40px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+}
+
+.footer-section-part h3 {
+  font-family: 'Hind-Bold';
+  position:absolute; /* Waxaan u isticmaalaynaa si aan u habeynno logo */
+  top:0;
+  left:40%;
+  text-align: center; /* Waxaan ku habeynaynaa qoraalka dhexda */
+
+  color: white;
+  font-size: 2rem;
+  margin-bottom: 20px; /* Waxaan ka saarnay position: absolute */
+}
+
+.logo-img {
+  width: 220px;
+  margin-bottom: 20px; /* Waxay u dhaxaynaysaa h3 iyo macluumaadka kale */
+}
+
+/* Konteenarka macluumaadka xiriirka (email, phone, location) */
+.contect {
+  display: flex;
+  flex-direction: column; /* Waxay hoos isugu xigayaan */
+  align-items: flex-start; /* Qoraalka waxaan ka bilaabaynaa bidix */
+  transform: translate(70%, 0); /* Waxaan u dhigaynaa si ay u dhexda ugu jiraan */
+  gap: 15px; /* Farqiga u dhexeeya */
+  width: 100%;
+  max-width: 350px; /* Si aysan aad u kala fogaan */
+}
+
+/* Habayn guud oo contact items-ka */
+.Location, .email, .phone {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  color: white;
+}
+
+.Location a, .email a, .phone a {
+  text-decoration: none;
+  font-family: 'Switzer-Regular', sans-serif;
+  color: white;
+  font-size: 1.1rem;
+}
+
+.location-a {
+    font-family: 'Switzer-Medium';
+    font-size: 1.2rem;
+}
+
+/* Icons */
+.location-icon, .email-icon, .iphone-icon1 {
+  width: 28px;
+  height: 28px;
+  flex-shrink: 0; /* Si aysan isku soo ururin */
+}
+.location-icon{
+    color: red;
+}
+
+
+/* Konteenarka Social Media */
+.social-media {
+  display: flex;
+  align-items: center;
+  transform: translate(-50%, 100px);
+  bottom: 0;
+  gap: 25px; /* Farqi weyn ayaan siinay */
+  margin-top: 20px; /* Waxaan ka fogaynay qoraalada kore */
+}
+
+.social-media a {
+  display: flex; /* Si icon-ka iyo qoraalku isula toosmaan */
+  align-items: center;
+  
+  
+  gap: 8px;
+  text-decoration: none;
+  font-family: 'Switzer-Regular';
+  font-size: 1.2rem;
+  color: white;
+  
+}
+
+.social-media a:hover {
+    color: #3b82f6; /* Midab isbeddelaya marka la dul tago */
+}
+
+.fecbook {
+  width: 35px;
+  height: 35px;
+  color: #0339b7;
+}
+
+.instagram {
+  width: 35px;
+  height: 35px;
+  fill: url(#gradientColor); /* Tani waxay u baahan tahay in SVG-ga lagu qeexo gradient */
+}
+
+/* Waan tirtiray class-kii .instagram-1 oo aanu muhiim ahayn */
+
+/* Waxaad u baahan tahay inaad hubiso in SVG-ga Instagram-ka uu leeyahay gradient-ka, haddii kale si caadi ah u midabee */
+.instagram {
+    /* Hadii aadan isticmaalayn gradient, isticmaal kan: */
+    color: #e4405f;
+}
+
+
+/* -----------------icons----------- -----------------------------*/
+.iphone-icon1{
+  width: 30px;
+  color: white;
+}
+.location-icon{
+  width: 40px;
+  color: red;
+}
+.fecbook{
+  width: 40px;
+  color: #0339b7;
+  
+}
+.instagram{
+  width: 40px;
+  transform: translateY(5px);
+  fill: url(#gradientColor);
+}
+.email-icon{
+  width: 30px;
+}
+/* ---------------------------icons--------------------- */
+.logo-img{
+  position: relative;
+  right: 0px;
+  bottom: -25px;
+  width: 260px;
+  
+}
+/* =================================
+  Koodhka Animation-ka (Scroll)
+   ================================= */
+.scroll-reveal {
+    opacity: 0;
+    transform: translateY(50px); /* Waxay ka bilaabmaysaa 50px hoos */
+    transition: opacity 1s ease-out, transform 0.8s ease-out;
+    will-change: opacity, transform; /* Waxay u sheegaysaa browser-ka inuu isu diyaariyo animation */
+}
+
+.scroll-reveal.visible {
+    opacity: 1;
+    transform: translateY(0); /* Waxay ku soo noqonaysaa meesheedii */
+}
+/* -------------------------------------------------------coursor------------------------------ */
+
+#custom-cursor {
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  position: fixed;
+  pointer-events: none; /* Si uusan u hor istaagin mouse-ka caadiga ah */
+  
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  background: rgba(255, 255, 255, 0.1);
+  
+  z-index: 9999;
+  left: 0;
+  top: 0;
+
+  /* Animation-ka socodka iyo qarsoomida */
+  transition: transform 0.3s ease-out, opacity 0.3s ease-out;
+  will-change: transform, opacity;
+}
+
+/* Class-kii .cursor-grow waa la saaray, kan ayaana lagu beddelay */
+/* Class-kan wuxuu qarinayaa cursor-ka gaarka ah */
+#custom-cursor.hidden {
+    opacity: 0;
+    transform: scale(0.5);
+}
+
+/*
+==========================================================================
+================== MOBILE RESPONSIVE DESIGN (max-width: 768px) ==================
+==========================================================================
+*/
+@media (max-width: 768px) {
+    section,
+    .secand-product-section,
+    #features-section,
+    #contact {
+        height: auto; /* Allow sections to grow based on content */
+        padding-top: 80px;
+        padding-bottom: 40px;
+    }
+
+    /* ===== HEADER & NAVIGATION ===== */
+    .logo1 {
+        position: relative; /* Changed from fixed to flow with page */
+        flex-direction: row;
+        height: auto;
+        width: auto;
+        top: 0;
+        padding: 10px 0;
+    }
+
+    .logo {
+        position: relative;
+        left: 0;
+        font-size: 2.5rem;
+        text-align: center;
+        width: 100%;
+        margin-bottom: 15px;
+    }
+
+    nav {
+        position: relative;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: auto;
+    }
+
+    nav ul {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .link:hover::after, .link2:hover::after {
+        transform: scaleX(0); /* Disable hover effect on mobile */
+    }
+
+    .down1 {
+        position: relative;
+        width:80%;
+        max-width: 250px;
+        left: 0;
+        top: 0;
+        margin-top: 20px;
+    }
+    
+    /* ===== HERO SECTION ===== */
+    header {
+      padding: 20px;
+      
+     
+      min-height: auto;
+      flex-direction: column;
+    }
+
+    .hero-text {
+        position: relative;
+        width: 100%;
+        left: 0;
+        top: 0;
+        transform: none;
+        padding: 20px 0;
+        line-height: 1.5;
+    }
+
+    .A {
+        font-size: 2.2rem;
+        left: 0;
+        bottom: 0;
+        display: block;
+        margin-bottom: 10px;
+    }
+
+    .B {
+        position: relative;
+        left: 0;
+        font-size: 1.2rem;
+        animation: none; /* Disable typing animation */
+        white-space: normal; /* Allow text to wrap */
+        border: none;
+        width: auto;
+        display: block;
+    }
+
+    .sub-text {
+        font-size: 1.1rem;
+    }
+
+    .hero-button a {
+        position: relative;
+        left: 0;
+        top: 0;
+        transform: none;
+        margin-top: 20px;
+        display: inline-block; /* Make it a block element to center */
+        font-size: 1rem;
+    }
+
+    /* Hide decorative images on mobile */
+    .image1, .image2, .image3, .image4, .image5, .image6 {
+        display: none;
+    }
+
+    
+    /* ===== PRODUCTS SECTION ===== */
+    /* HALKAN WAXAA KU JIRA HAGAAJINTII AAD CODsatay EE KAARARKA */
+    #product {
+      flex-direction: column;
+        padding: 40px 15px;
+    }
+
+    .cards {
+        gap: 25px; /* Wax isbeddel ah laguma samayn */
+    }
+    .card {
+        padding: 20px; /* La siiyay padding isku mid ah dhinacyada oo dhan */
+        height: auto; /* Si loogu ogolaado inuu la qabsado content-ka */
+        max-height: none; /* Waxaa laga saaray max-height-kii desktop-ka */
+    }
+    .image-card {
+        height: auto; /* Dhererka waxaa la qabsan doona sawirka */
+        width: 100%;
+    }
+    .image-card img {
+        height: 200px; /* Dhererka sawirka oo la habeeyay */
+        width: 100%;
+        object-fit: contain;
+    }
+    .product-name {
+        font-size: 1.15rem; /* La yareeyay cabbirka farta si ay ula qabsato mobilka */
+        padding: 15px 0 5px 0;
+    }
+    .description {
+        font-size: 0.9rem; /* Cabbirka farta oo la yareeyay */
+        padding: 0 10px 15px 10px;
+        flex-grow: 0;
+        min-height: 45px; /* Si loo hubiyo in dhererka kaararku isku dhowaado */
+    }
+    .price {
+        font-size: 1.25rem; /* Cabbirka farta oo la habeeyay */
+        padding-bottom: 15px;
+    }
+    .product-link {
+        position: static;
+        transform: none;
+        margin-top: auto; /* Waxay riixaysaa badhanka hoos si kaararku isku toosmaan */
+        display: inline-block;
+        padding: 10px 25px; /* La habeeyay si ay u sahlanaato in la taabto */
+        font-size: 0.95rem;
+    }
+    /* DHAMAADKA HAGAAJINTA KAARARKA */
+
+    /* ===== NEW ARRIVAL SECTION ===== */
+    .secand-product-section {
+      padding: 0;
+    }
+    .arrival {
+        font-size: 2rem;
+        margin-left: 0;
+    }
+    .new-products {
+        width: 95%;
+        gap: 15px;
+    }
+    #hoverVideo {
+        width: 95%;
+        transform: none;
+        margin: 20px auto;
+        display: block;
+        height: 250px;
+    }
+    .slider-track img {
+        width: 220px;
+        height: 150px;
+    }
+    
+    /* ===== FEATURES SECTION ===== */
+    #features-section {
+      height: auto;
+      max-height: none;
+      padding: 40px 20px;
+      top: 0;
+    }
+    .section-title h2 {
+      font-size: 2rem;
+    }
+    .section-subtitle {
+      font-size: 1rem;
+    }
+    .features-grid {
+      gap: 25px;
+      margin-top: 30px;
+    }
+    .feature-card {
+      padding: 30px 20px;
+    }
+
+    /* ===== FOOTER/CONTACT SECTION ===== */
+    #contact {
+        padding: 40px 15px;
+    }
+
+    .footer-section-part {
+        flex-direction: column;
+        padding: 30px 20px;
+        height: auto;
+        gap: 20px;
+    }
+
+    .footer-section-part h3 {
+        position: static;
+        font-size: 1.8rem;
+        margin-bottom: 10px;
+    }
+
+    .logo-img {
+        position: static;
+        width: 180px;
+        bottom: 0;
+        order: 3; /* Move logo to the bottom */
+        margin-top: 20px;
+    }
+
+    .contect {
+        transform: none;
+        align-items: center;
+        text-align: center;
+        gap: 20px;
+        order: 1;
+    }
+
+    .Location, .email, .phone {
+        justify-content: center;
+    }
+
+    .social-media {
+        position: static;
+        transform: none;
+        margin-top: 15px;
+        order: 2;
+    }
+}

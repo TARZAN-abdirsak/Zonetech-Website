@@ -1,0 +1,122 @@
+[
+  {
+    "id": 2,
+    "name": "Smart Lamp",
+    "description": "A sleek smart lamp for your space.",
+    "price": "$35.50",
+    "imageUrl": "https://m.media-amazon.com/images/I/61AcT0ZuO3L._AC_SL1500_.jpg",
+    "affiliateLink": "https://a.co/d/xxxxxxx",
+    "tag": "popular",
+    "isFeatured": true
+  },
+  {
+    "id": 3,
+    "name": "Robotic Vacuum",
+    "description": "Keeps your floors clean automatically.",
+    "price": "$120.00",
+    "imageUrl": "https://m.media-amazon.com/images/I/61x9hrrHN2L.__AC_SX300_SY300_QL70_FMwebp_.jpg",
+    "affiliateLink": "https://a.co/d/yyyyyyy",
+    "tag": "sale",
+    "isFeatured": true
+  },
+  {
+    "name": "Lmadax furasho",
+    "description": "fefe f ecf cwxfw ecfw",
+    "price": "$5",
+    "affiliateLink": "https://www.amazon.com/dp/B079_1HY4V?tag=demoaffiliate-20",
+    "imageUrl": "https://m.media-amazon.com/images/I/617QXc+mW9L._AC_UY327_FMwebp_QL65_.jpg",
+    "tag": "new",
+    "id": 4,
+    "isFeatured": true
+  },
+  {
+    "name": "Robotic Vacuum",
+    "description": "aciascnaoisncoiasncoiasnc",
+    "price": "$110",
+    "affiliateLink": "https://a.co/d/yyyyyyy",
+    "imageUrl": "https://m.media-amazon.com/images/I/61+rjzm6VcL._AC_SY300_SX300_.jpg",
+    "tag": "old",
+    "id": 5,
+    "isFeatured": false
+  },
+  {
+    "name": " SteelSeries Arctis Nova Pro Wireless",
+    "description": "e r grth trhvrt hvtr ",
+    "price": "$700",
+    "affiliateLink": "https://a.co/d/yyyyyyy",
+    "imageUrl": "https://m.media-amazon.com/images/I/81l7mB5LhsL._AC_UY327_FMwebp_QL65_.jpg",
+    "tag": "new",
+    "id": 6,
+    "isFeatured": false
+  },
+  {
+    "name": "dhago dhago  ",
+    "description": "sc vsdvsdvsdvsdv",
+    "price": "$150",
+    "affiliateLink": "https://www.amazon.com/dp/B0863TXGM3?tag=demoaffiliate-20",
+    "imageUrl": "https://m.media-amazon.com/images/I/81kWrb3DioL._AC_UY327_FMwebp_QL65_.jpg",
+    "tag": "new",
+    "isFeatured": false,
+    "id": 7
+  },
+  {
+    "name": "sawir cususb",
+    "description": "waa tan sawireka cususb",
+    "price": "$75",
+    "affiliateLink": "https://www.amazon.com/dp/B07R5QD598?tag=demoaffiliate-20",
+    "imageUrl": "https://m.media-amazon.com/images/I/71o8Q5XJS5L._AC_SL1500_.jpg",
+    "tag": "new",
+    "isFeatured": false,
+    "id": 8
+  },
+  {
+    "name": "sawir kuu uku danbeyay",
+    "description": "side waye qoralkann ilaa intuu yahay",
+    "price": "$100",
+    "affiliateLink": "https://www.amazon.com/dp/B0B5T3QHT9?tag=demoaffiliate-20",
+    "imageUrl": "https://m.media-amazon.com/images/I/61gei-twvaL._AC_UY327_FMwebp_QL65_.jpg",
+    "tag": "popular",
+    "isFeatured": false,
+    "id": 9
+  },
+  {
+    "name": "Anker 737 GaNPrime 120W Charger",
+    "description": "maidkan mas oo muuuuqan doona",
+    "price": "$1000",
+    "affiliateLink": "https://www.amazon.com/dp/B07PDVBL85?tag=demoaffiliate-20",
+    "imageUrl": "https://m.media-amazon.com/images/I/61vJmk7lVfL._AC_UY327_FMwebp_QL65_.jpg",
+    "tag": "old",
+    "isFeatured": false,
+    "id": 10
+  },
+  {
+    "name": "Redragon M913 Impact Elite Wireless Gaming Mouse",
+    "description": "16000 DPI Wired/Wireless RGB Mouse with 16 Programmable Buttons, 45 Hr Battery and Pro Optical Sensor, 12 Side Buttons MMO Mous",
+    "price": "$31.38",
+    "affiliateLink": "https://a.co/d/fYLMQ4y",
+    "imageUrl": "https://m.media-amazon.com/images/I/61C7blR0ZAL._AC_CR0%2C0%2C0%2C0_SX615_SY462_.jpg",
+    "tag": "new",
+    "isFeatured": false,
+    "id": 12
+  },
+  {
+    "name": "BALANDER",
+    "description": " 10-Speed Countertop Blender, Pulse Button, 6-Cup Glass Jar, Dishwasher-Safe, Stainless Steel Blade, Suction Feet",
+    "price": "$50",
+    "affiliateLink": "https://a.co/d/59vaQql",
+    "imageUrl": "https://m.media-amazon.com/images/I/61+vCZvKgfL._AC_SX679_.jpg",
+    "tag": "new",
+    "isFeatured": false,
+    "id": 13
+  },
+  {
+    "name": "ZIHNIC Bluetooth Headphones ",
+    "description": "ercgbhfg bhd",
+    "price": "$1000",
+    "affiliateLink": "https://a.co/d/826tF1O",
+    "imageUrl": "https://m.media-amazon.com/images/I/616I0vNEzQL.__AC_SX300_SY300_QL70_FMwebp_.jpg",
+    "tag": "new",
+    "isFeatured": true,
+    "id": 14
+  }
+]

@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="so">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Maaree Badeecadaha</title>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/fonts.css') }}">
+    <style>
+        body { font-family:'Hind-Bold', sans-serif; margin: 0; background-color: #2f7daa; color: #333; }
+        .container { max-width: 900px; margin: 40px auto; padding: 20px; background-color: #fff; border-radius: 8px; box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); }
+        h1 { color: #1e293b; border-bottom: 2px solid #051463; padding-bottom: 10px; margin-bottom: 20px; }
+        .header-actions { display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px; }
+        .logout-btn { background-color: #000000; color: white; border: none; padding: 10px 15px; border-radius: 5px; cursor: pointer; font-family:'Hind-Bold', sans-serif; font-size: 16px; }
+        .logout-btn:hover { background-color: #5a6268; }
+        .add-new-link { display: inline-block; padding: 10px 15px; background-color: #007bff; color: white; text-decoration: none; border-radius: 5px; }
+        table { width: 100%; border-collapse: collapse; margin-top: 20px; }
+        th, td { padding: 12px 15px; text-align: left; border-bottom: 1px solid #ddd; }
+        th { background-color: #f8f9fa; font-weight: 600; }
+        .actions a, .actions button { padding: 5px 10px; border-radius: 4px; text-decoration: none; font-family:'Hind-Bold'; }
+        .actions .edit-btn { background-color: #ffc107; color: black; }
+        .actions .delete-btn { background-color: #dc3545; color: white; border: none; cursor: pointer; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header-actions">
+            <h1>Maaree Badeecadaha</h1>
+            <div>
+                <a href="{{ url_for('admin_page') }}" class="add-new-link" target="_blank">Ku dar Badeeco Cusub</a>
+                <button id="logout-btn" class="logout-btn">Logout</button>
+            </div>
+        </div>
+
+        <table id="product-table">
+            <thead>
+                <tr><th>ID</th><th>Magaca Badeecada</th><th>Qiimaha</th><th>Tag</th><th>Featured?</th><th>Tallaabooyinka</th></tr>
+            </thead>
+            <tbody id="product-list-container"></tbody>
+        </table>
+        <p id="loading-message">Soo dejinta badeecadaha...</p>
+    </div>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    const productContainer = document.getElementById('product-list-container');
+    const loadingMessage = document.getElementById('loading-message');
+    const logoutBtn = document.getElementById('logout-btn');
+
+    // Hubinta Amniga
+    fetch('/api/check-auth', { credentials: 'include', headers: { 'Cache-Control': 'no-cache' } })
+    .then(response => response.json())
+    .then(data => {
+        if (data.authenticated) {
+            // Hadda wuu wacayaa function-ka oo buuxa
+            fetchAndDisplayProducts();
+        } else {
+            window.location.href = '/login';
+        }
+    }).catch(() => window.location.href = '/login');
+
+    // =========================================================================
+    // HALKAN WAA FUNCTION-KII MAQNAA OO LA SOO CELIYAY
+    // =========================================================================
+    function fetchAndDisplayProducts() {
+        loadingMessage.style.display = 'block'; // Soo bandhig fariinta inta la soo dejinayo
+        fetch('/api/products?include_featured=true', { credentials: 'include' })
+            .then(response => {
+                if (!response.ok) {
+                    throw new Error('Network response was not ok');
+                }
+                return response.json();
+            })
+            .then(products => {
+                loadingMessage.style.display = 'none';
+                productContainer.innerHTML = '';
+                if (products.length === 0) {
+                    productContainer.innerHTML = '<tr><td colspan="6" style="text-align:center;">Lama helin wax badeeco ah.</td></tr>';
+                    return;
+                }
+                products.sort((a, b) => b.id - a.id);
+                products.forEach(product => {
+                    const tableRow = `
+                        <tr>
+                            <td>${product.id}</td>
+                            <td>${product.name}</td>
+                            <td>${product.price}</td>
+                            <td><span>${product.tag || 'N/A'}</span></td>
+                            <td><span>${product.isFeatured ? 'Haa' : 'Maya'}</span></td>
+                            <td class="actions">
+                                <a href="/admin?id=${product.id}" class="edit-btn" target="_blank">Edit</a>
+                                <button class="delete-btn" data-id="${product.id}">Delete</button>
+                            </td>
+                        </tr>
+                    `;
+                    productContainer.innerHTML += tableRow;
+                });
+            }).catch(error => {
+                console.error('Error fetching products:', error);
+                loadingMessage.textContent = 'Cillad ayaa ka dhacday soo dejinta badeecadaha: ' + error.message;
+            });
+    }
+    // =========================================================================
+    // DHAMAADKA FUNCTION-KII MAQNAA
+    // =========================================================================
+
+    // Tirtiridda (DELETE)
+    productContainer.addEventListener('click', function(event) {
+        if (event.target.classList.contains('delete-btn')) {
+            const productId = event.target.dataset.id;
+            Swal.fire({
+                title: 'Ma hubtaa?',
+                text: "Badeecadan si joogto ah ayaa loo tirtiri doonaa!",
+                icon: 'warning',
+                showCancelButton: true,
+                confirmButtonColor: '#d33',
+                cancelButtonColor: '#3085d6',
+                confirmButtonText: 'Haa, tirtir!',
+                cancelButtonText: 'Iska daa'
+            }).then((result) => {
+                if (result.isConfirmed) {
+                    fetch(`/api/delete-product/${productId}`, {
+                        method: 'DELETE',
+                        credentials: 'include'
+                    })
+                    .then(response => response.json())
+                    .then(data => {
+                        if (data.success) {
+                            Swal.fire('La Tirtiray!', data.message, 'success');
+                            fetchAndDisplayProducts();
+                        } else {
+                            Swal.fire('Cillad!', data.error || 'Lama tirtiri karin.', 'error');
+                        }
+                    })
+                    .catch(() => Swal.fire('Cillad Network!', 'Cillad isgaarsiineed ayaa dhacday.', 'error'));
+                }
+            });
+        }
+    });
+
+    // Ka bixitaanka (LOGOUT)
+    logoutBtn.addEventListener('click', function() {
+        fetch('/api/logout', { method: 'POST', credentials: 'include' })
+        .then(response => response.json())
+        .then(data => {
+            if (data.success) {
+                Swal.fire({
+                    title: 'Waa lagaa saaray!',
+                    text: 'Si guul leh ayaad uga baxday.',
+                    icon: 'success',
+                    timer: 2000,
+                    showConfirmButton: false
+                }).then(() => {
+                    window.location.href = '/login';
+                });
+            }
+        })
+        .catch(error => console.error('Error:', error));
+    });
+});
+</script>
+</body>
+</html>

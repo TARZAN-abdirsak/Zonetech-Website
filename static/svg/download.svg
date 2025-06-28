@@ -1,0 +1,16 @@
+<svg width="400" height="120" viewBox="0 0 400 120" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="blueGloss" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#0f1a2f"></stop>
+      <stop offset="50%" stop-color="#0a1a35"></stop>
+      <stop offset="100%" stop-color="#071326"></stop>
+    </linearGradient>
+    <filter id="shadow" x="-50%" y="-50%" width="200%" height="200%">
+      <feDropShadow dx="2" dy="2" stdDeviation="3" flood-color="#000000" flood-opacity="0.5"></feDropShadow>
+    </filter>
+  </defs>
+
+  <text x="50%" y="65%" text-anchor="middle" font-size="48" font-family="Orbitron, sans-serif" fill="url(#blueGloss)" filter="url(#shadow)">
+    ZoneTech
+  </text>
+</svg>
